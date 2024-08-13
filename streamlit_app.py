@@ -35,7 +35,9 @@ if upload_prev is not None and upload_asset is not None:
 
     if not df_merged.empty:
         # st.dataframe(row_isna, hide_index=True, use_container_width=True)
+        rec_count = len(filterdf)
         st.dataframe(filterdf, hide_index=True, use_container_width=True)
+        st.write(f"Jumlah Record: {rec_count}")
     else:
         st.write("Tidak ada asset yang belum")
 
